@@ -100,6 +100,7 @@ $^1$提交记录的版本号，是个[SH-1的哈希值](https://baike.baidu.com/
 更直白的说：和github的联动；gitee一般不做考虑
 
 + 绑定远程仓库 `git remote add/rm/-v`
+
 + **拉取** 远程仓库 git **clone** / **fetch** / **pull**(fetch + merge)  --- 是与远程仓库通信的方式
 
   + clone：在别人的基础上开始干（带有.git文件）；自己有仓库就不要clone
@@ -109,9 +110,25 @@ $^1$提交记录的版本号，是个[SH-1的哈希值](https://baike.baidu.com/
 
 + **推送** 到远程仓库 `git push origin <远程的branch>`
 
+  > 注： 2023.01以后不能再简单使用账号密码push，而是应该用tokens
+
   + 从本地的仓库推送到远端的仓库
-  + remote绑定后，本地和远端github互认则可以推上去自己的；别人的不能随便推上去
+  + remote绑定后，本地和远端github互认 则可以推上去自己的；别人的不能随便推上去
   + 推到别人的 **PR**：`pull request`向别人申请拉取自己的代码 
+
++ 对远程的操作中 `git clone / git fetch /git pull` 出现一些如下的 fatal 
+
+  ```shell
+  LibreSSL SSL_connect: SSL_ERROR_SYSCALL in connection to github.com:443
+  Failure when receiving data from the peer
+  ```
+
+  一般都是代理造成的；禁用可以解决问题
+
+  ```shell
+  git config --global --unset http.proxy
+  git config --global --unset https.proxy
+  ```
 
   
 
