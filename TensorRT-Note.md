@@ -6,8 +6,8 @@
 2. [Github-TensorRT](https://github.com/NVIDIA/TensorRT)：包含了安装版本对齐
 3. [Nvidia-TensorRT Guide](https://developer.nvidia.com/tensorrt)：官方的介绍
 
-+ [官方文档 - TensorRT支持的平台 - （限制）](https://docs.nvidia.com/deeplearning/tensorrt/support-matrix/index.html)
-
+**重点参考** [官方文档 - TensorRT支持的平台 - （限制）](https://docs.nvidia.com/deeplearning/tensorrt/support-matrix/index.html)
+ 最快的实现手段，当然是pull一个nvidia的docker下来，直接跑人家的样例了
 
 
 # 1-TensorRT是什么
